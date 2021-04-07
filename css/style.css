@@ -8,6 +8,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+ul li {
+  list-style-type: none;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
