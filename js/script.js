@@ -5,6 +5,8 @@ console.log("Km da percorrere:", yourDistance, "km");
 var yourAge = parseInt(prompt("Quanti anni hai?"));
 console.log("Età del passeggero:", yourAge, "anni");
 
+var discount_20;
+var discount_40;
 var ticketPrice;
 
 //dichiarazione costanti
@@ -21,12 +23,14 @@ if (yourAge >= 18 && yourAge <= 65) {
   document.getElementById("ticket-price").innerHTML =
     "Prezzo Biglietto - Tariffa Piena: " + ticketPrice + " euro.";
 } else if (yourAge < 18) {
-  ticketPrice = (yourDistance * PRICEFORKM * DISC_20).toFixed(2);
+  discount_20 = (yourDistance * PRICEFORKM * DISC_20).toFixed(2);
+  ticketPrice = (yourDistance * PRICEFORKM - discount_20).toFixed(2);
   console.log("Prezzo Biglietto - Tariffa Under 18: ", ticketPrice, "euro.");
   document.getElementById("ticket-price").innerHTML =
     "Prezzo Biglietto - Tariffa Under 18: " + ticketPrice + " euro.";
 } else if (yourAge > 65) {
-  ticketPrice = (yourDistance * PRICEFORKM * DISC_40).toFixed(2);
+  discount_40 = (yourDistance * PRICEFORKM * DISC_40).toFixed(2);
+  ticketPrice = (yourDistance * PRICEFORKM - discount_40).toFixed(2);
   console.log("Prezzo Biglietto - Tariffa Over 65: ", ticketPrice, "euro.");
   document.getElementById("ticket-price").innerHTML =
     "Prezzo Biglietto - Tariffa Over 65: " + ticketPrice + " euro.";
