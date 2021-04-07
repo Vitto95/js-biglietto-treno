@@ -19,19 +19,19 @@ const DISC_40 = 0.4;
 
 if (yourAge >= 18 && yourAge <= 65) {
   ticketPrice = (yourDistance * PRICEFORKM).toFixed(2);
-  console.log("Prezzo Biglietto - Tariffa Piena: ", ticketPrice, "euro.");
+  //console.log("Prezzo Biglietto - Tariffa Piena: ", ticketPrice, "euro.");
   document.getElementById("ticket-price").innerHTML =
     "Prezzo Biglietto - Tariffa Piena: " + ticketPrice + " euro.";
 } else if (yourAge < 18) {
   discount_20 = (yourDistance * PRICEFORKM * DISC_20).toFixed(2);
   ticketPrice = (yourDistance * PRICEFORKM - discount_20).toFixed(2);
-  console.log("Prezzo Biglietto - Tariffa Under 18: ", ticketPrice, "euro.");
+  //console.log("Prezzo Biglietto - Tariffa Under 18: ", ticketPrice, "euro.");
   document.getElementById("ticket-price").innerHTML =
     "Prezzo Biglietto - Tariffa Under 18: " + ticketPrice + " euro.";
 } else if (yourAge > 65) {
   discount_40 = (yourDistance * PRICEFORKM * DISC_40).toFixed(2);
   ticketPrice = (yourDistance * PRICEFORKM - discount_40).toFixed(2);
-  console.log("Prezzo Biglietto - Tariffa Over 65: ", ticketPrice, "euro.");
+  //console.log("Prezzo Biglietto - Tariffa Over 65: ", ticketPrice, "euro.");
   document.getElementById("ticket-price").innerHTML =
     "Prezzo Biglietto - Tariffa Over 65: " + ticketPrice + " euro.";
 }

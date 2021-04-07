@@ -8,14 +8,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.text-center {
-  text-align: center;
-}
-
 .wrapper {
-  /* display: flex;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
   width: 80%;
   height: calc(100vh - 50px);
   margin: 25px auto;
